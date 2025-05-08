@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clowns-SMM Panel</title>
+    <style>
+        body { font-family: Arial; margin: 0; padding: 0; background: #111; color: #fff; }
+        #sidebar { width: 200px; background: #222; height: 100vh; position: fixed; top: 0; left: 0; padding-top: 20px; }
+        #sidebar a { display: block; padding: 12px; color: #fff; text-decoration: none; }
+        #sidebar a:hover { background: #333; }
+        #content { margin-left: 200px; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .grid div { background: #2a2a2a; padding: 20px; text-align: center; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Orders</a>
+        <a href="#">Admin Login</a>
+    </div>
+    <div id="content">
+        <h1>Welcome to Clowns-SMM Panel</h1>
+        <p>Please choose a social network for promotion:</p>
+        <div class="grid">
+            <div>YouTube</div><div>Instagram</div><div>Facebook</div><div>TikTok</div>
+            <div>Twitch</div><div>Kick</div><div>Telegram</div><div>Spotify</div>
+            <div>SoundCloud</div><div>Twitter</div><div>Reddit</div><div>LinkedIn</div>
+            <div>Discord</div><div>Pinterest</div><div>Snapchat</div>
+        </div>
+    </div>
+</body>
+</html>
