@@ -1,16 +1,25 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Admin Login</title>
-</head>
+<html>
+<head><title>Admin Login</title></head>
 <body>
   <h1>Admin Login</h1>
-  <form>
-    <label>Username:</label><input type="text" name="username"><br>
-    <label>Password:</label><input type="password" name="password"><br>
+  <form onsubmit="login(event)">
+    <input type="text" id="user" placeholder="Username"><br>
+    <input type="password" id="pass" placeholder="Password"><br>
     <button type="submit">Login</button>
   </form>
+  <script>
+    function login(e) {
+      e.preventDefault();
+      if (document.getElementById('user').value === 'clownadmin' &&
+          document.getElementById('pass').value === 'Co11inQB!!!!!') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Invalid login');
+      }
+    }
+  </script>
 </body>
 </html>
