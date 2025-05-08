@@ -28,3 +28,22 @@ app.get('/admin/dashboard', (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
+
+app.get('/admin/set-prices', (req, res) => {
+  if (req.session.loggedIn) {
+    return res.sendFile(path.join(__dirname, 'admin', 'set-prices.html'));
+  }
+  res.redirect('/admin');
+});
+
+app.post('/admin/save-prices', (req, res) => {
+  console.log('Saving price for service:', req.body.service_id, 'with price:', req.body.custom_price);
+  res.redirect('/admin/dashboard');
+});
+
+app.get('/admin/view-orders', (req, res) => {
+  if (req.session.loggedIn) {
+    return res.sendFile(path.join(__dirname, 'admin', 'view-orders.html'));
+  }
+  res.redirect('/admin');
+});
