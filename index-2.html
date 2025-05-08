@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clowns-SMM Panel</title>
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #111; color: #fff;
+    }
+    .sidebar {
+      width: 220px; background: #1e1e1e; height: 100vh; position: fixed;
+      top: 0; left: 0; display: flex; flex-direction: column; padding-top: 20px;
+    }
+    .sidebar a {
+      padding: 14px 20px; color: #ccc; text-decoration: none; display: block;
+    }
+    .sidebar a:hover {
+      background: #333; color: #fff;
+    }
+    .content {
+      margin-left: 220px; padding: 30px;
+    }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px;
+    }
+    .box {
+      background: #2a2a2a; padding: 20px; border-radius: 8px; text-align: center;
+      transition: 0.2s; cursor: pointer;
+    }
+    .box:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#">Welcome</a>
+    <a href="#">Order</a>
+    <a href="#">Set Prices</a>
+    <a href="#">Orders</a>
+    <a href="#">Admin Login</a>
+  </div>
+  <div class="content">
+    <h1>Welcome to Clowns-SMM</h1>
+    <p>Select a platform to get started:</p>
+    <div class="grid">
+      <div class="box">Instagram</div>
+      <div class="box">TikTok</div>
+      <div class="box">YouTube</div>
+      <div class="box">Facebook</div>
+      <div class="box">Twitter (X)</div>
+      <div class="box">Spotify</div>
+      <div class="box">Kick</div>
+      <div class="box">Reddit</div>
+      <div class="box">Snapchat</div>
+      <div class="box">SoundCloud</div>
+      <div class="box">Discord</div>
+      <div class="box">Twitch</div>
+    </div>
+  </div>
+</body>
+</html>
